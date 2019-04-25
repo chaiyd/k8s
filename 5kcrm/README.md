@@ -7,7 +7,7 @@ apache默认端口为80
 
 运行
 
-将72crm放入本机的/var/www/html/中，或者自行更改docker挂载目录
+将72crm放入/var/www/html/目录中，或者自行更改docker挂载目录
 
 docker run -d -it -v "/var/www/html:/var/www/html" -p 9090:80 chaiyd/centos_5kcrm
 
