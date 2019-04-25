@@ -3,7 +3,8 @@ source /etc/profile
 set -euo pipefail
 
 #chown -Rf www.www 
-chwon -R apache.apache /var/www/html/72crm/
+chown -R apache.apache /var/www/html/
+#chmod +x /var/www/cmd.sh
 httpd
 php-fpm
 # Start supervisord and services
