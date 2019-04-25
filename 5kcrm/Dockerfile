@@ -6,7 +6,7 @@ RUN yum install -y epel-release && \
     yum install -y  supervisor httpd httpd-devel
  
 COPY ./config/httpd.conf /etc/httpd/conf/
-ADD ./72crm.tar.gz /var/www/html
+#ADD ./72crm.tar.gz /var/www/html
 COPY ./config/cmd.sh /var/www/
 
 RUN  chmod 755 /var/www/cmd.sh && \
