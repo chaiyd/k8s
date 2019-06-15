@@ -1,7 +1,7 @@
 基于centos的docker镜像
 
 
-此镜像中包含php56已经apache2.4
+此镜像中包含php56、apache2.4，不包含悟空crm主程序
 
 apache默认端口为80
 
