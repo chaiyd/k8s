@@ -7,7 +7,7 @@ RUN yum install -y epel-release && \
     rm -rf /tmp/*
  
 COPY ./config/httpd.conf /etc/httpd/conf/
-ADD ./72crm.tar.gz /var/www/html/
+ADD ./config/72crm.tar.gz /var/www/html/
 COPY ./config/cmd.sh /var/www/
 
 RUN  chmod +x /var/www/cmd.sh && \
