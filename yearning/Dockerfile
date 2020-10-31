@@ -1,0 +1,43 @@
+FROM alpine:3.12 AS builder
+
+LABEL maintainer="Docker Maintainers <chaiyd.cn@gmail.com>"
+
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories \
+    && apk update  \
+    && echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf
+
+ARG YEARNING_VER=2.2.2
+ARG MYSQL_ADDR=127.0.0.1:3306
+ARG MYSQL_DB=yearning
+ARG MYSQL_USER=root
+ARG MYSQL_PASSWORD=passwd
+
+ARG YEARNING_URL=https://github.com/cookieY/Yearning/releases/download/v$YEARNING_VER/Yearning-$YEARNING_VER-4kstars.linux-amd64-patch-1.zip
+RUN wget -cqO yearning.zip $YEARNING_URL && \
+    unzip yearning.zip -d /opt
+
+
+FROM alpine:3.12
+
+LABEL maintainer="Docker Maintainers <chaiyd.cn@gmail.com>"
+
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories \
+    && apk update  \
+    && apk add --no-cache ca-certificates bash tree tzdata libc6-compat \
+    && cp -rf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+    && echo "Asia/Shanghai" > /etc/timezone \
+    && echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf
+
+ENV SecretKey=dbcjqheupqjsyear
+
+COPY --from=builder /opt/Yearning-go/Yearning /opt/Yearning-go/Yearning
+COPY --from=builder /opt/Yearning-go/dist /opt/Yearning-go/dist
+COPY --from=builder /opt/Yearning-go/conf.toml /opt/Yearning-go/conf.toml
+
+WORKDIR /opt/Yearning-go
+
+EXPOSE 8000
+
+ENTRYPOINT  ["/opt/Yearning-go/Yearning"]
+
+CMD ["-m", "-s"]
