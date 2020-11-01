@@ -7,13 +7,12 @@
 * http://yearning.io
 * https://guide.yearning.io
 
-* docker启动时传入相应变量
+### docker启动时传入相应变量
 ```
 docker run -d -it -p8000:8000 -e MYSQL_USER=root -e MYSQL_ADDR=10.0.0.3:3306 -e MYSQL_PASSWORD=123123 -e MYSQL_DB=Yearning chaiyd/yearning
-
 ```
 
-* docker-compose
+### docker-compose
 ```
 version: '3'
 
@@ -46,7 +45,3 @@ services:
             - --collation-server=utf8mb4_unicode_ci
 # 默认账号：admin，默认密码：Yearning_admin
 ```
-
-
-
-
