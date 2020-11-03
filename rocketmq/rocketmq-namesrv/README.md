@@ -12,7 +12,7 @@ Apache RocketMQ™ is a unified messaging engine, lightweight data processing pl
 ## TAG
 * [rocketmq, rocketmq-4.7.1](https://github.com/chaiyd/docker/tree/master/rocketmq)
   * 镜像默认包含mqnamesrv，broker  
-* [rocketmq-mqnamesrv, rocketmq-broker-4.7.1, mqnamesrv-4.7.1](https://github.com/chaiyd/docker/tree/master/rocketmq-mqnamesrv)
+* [rocketmq-mqnamesrv, rocketmq-mqnamesrv-4.7.1, mqnamesrv-4.7.1](https://github.com/chaiyd/docker/tree/master/rocketmq-mqnamesrv)
   * 仅包含mqnamesrv
 * [rocketmq-broker, rocketmq-broker-4.7.1, broker-4.7.1](https://github.com/chaiyd/docker/tree/master/rocketmq-broker)
   * 仅包含broker
