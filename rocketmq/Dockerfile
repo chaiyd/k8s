@@ -29,7 +29,7 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 
 COPY --from=builder /opt/$ROCKETMQ_NAME /opt/$ROCKETMQ_NAME
 ADD start.sh /opt/$ROCKETMQ_NAME
-RUN chmod +x start.sh
+RUN chmod +x /opt/$ROCKETMQ_NAME/start.sh
 
 WORKDIR /opt/$ROCKETMQ_NAME
 EXPOSE 9876 10911
