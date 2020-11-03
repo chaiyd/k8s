@@ -27,11 +27,11 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     && cp -rf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo "Asia/Shanghai" > /etc/timezone
 
-COPY --from=builder /opt/$ROCKETMQ_NAME /opt/$ROCKETMQ_NAME
-ADD start.sh /opt/$ROCKETMQ_NAME
-RUN chmod +x /opt/$ROCKETMQ_NAME/start.sh
+COPY --from=builder /opt/$ROCKETMQ_NAME /opt/rocketmq
+ADD start.sh /opt/rocketmq
+RUN chmod +x /opt/rocketmq/start.sh
 
-WORKDIR /opt/$ROCKETMQ_NAME
+WORKDIR /opt/rocketmq
 EXPOSE 9876 10911
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
 CMD ["sh", "-c", "./start.sh"]
