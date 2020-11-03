@@ -3,6 +3,7 @@
 Apache RocketMQ™ is a unified messaging engine, lightweight data processing platform.
 
 ## 简述
+* https://github.com/chaiyd/docker.git
 * rocketmq默认大约需要12G内存
 * mqnamesrv 4G
 * broker 8G
