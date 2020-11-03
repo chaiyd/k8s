@@ -13,7 +13,7 @@ RUN wget -c $ROCKETMQ_URL && \
     unzip $ROCKETMQ_NAME.zip -d /opt
 
 
-FROM registry.cn-shanghai.aliyuncs.com/upp/jdk:8u252-zulu-alpine
+FROM mcr.microsoft.com/java/jdk:8-zulu-alpine
 
 LABEL maintainer="Docker Maintainers <chaiyd.cn@gmail.com>"
 
