@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
 docker tag $IMAGE_NAME $DOCKER_REPO:namesrv-4.7.1
+docker tag $IMAGE_NAME $DOCKER_REPO:$DOCKER_REPO-namesrv-4.7.1
 docker push $DOCKER_REPO:namesrv-4.7.1
+docker push $DOCKER_REPO:$DOCKER_REPO-namesrv-4.7.1
