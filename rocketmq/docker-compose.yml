@@ -12,7 +12,7 @@ services:
         restart: always
 
     rocketmq-namesrv:
-        image: rocketmq:mqnamesrv
+        image: rocketmq:mqnamesrv-4.7.1
         ports:
             - 9876:9876
         restart: always
