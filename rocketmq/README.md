@@ -21,7 +21,7 @@ Apache RocketMQ™ is a unified messaging engine, lightweight data processing pl
 * rocketmq:broker-tag
   * 仅包含broker
   * 单独使用broker-tag请一定要传入ROCKETMQ_ADDR
-    ```ROCKETMQ_ADDR=localhost:9876```
+  * ```ROCKETMQ_ADDR=localhost:9876```
 
 ## rocketmq官方文档
 * https://rocketmq.apache.org/
