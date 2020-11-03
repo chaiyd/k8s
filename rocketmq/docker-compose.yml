@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+    rocketmq-broker:
+        image: rocketmq:broker-4.7.1
+        ports:
+            - 10911:10911
+        depends_on:
+            - rocketmq-namesrv
+        environment:
+            ROCKETMQ_ADDR: rocketmq-namesrv:9876
+        restart: always
+
+    rocketmq-namesrv:
+        image: rocketmq:mqnamesrv
+        ports:
+            - 9876:9876
+        restart: always
