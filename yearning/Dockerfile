@@ -29,7 +29,7 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     && echo "Asia/Shanghai" > /etc/timezone \
     && echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf
 
-ENV SecretKey=dbcjqheupqjsyear
+#ENV SecretKey=dbcjqheupqjsyear
 
 COPY --from=builder /opt/Yearning-go/Yearning /opt/Yearning-go/Yearning
 COPY --from=builder /opt/Yearning-go/dist /opt/Yearning-go/dist
