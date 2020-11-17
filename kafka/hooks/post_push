@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+#docker tag $IMAGE_NAME $DOCKER_REPO:4.7.1
+docker tag $IMAGE_NAME $DOCKER_REPO:kafka-2.6.0
+docker push $DOCKER_REPO:kafka-2.6.0
