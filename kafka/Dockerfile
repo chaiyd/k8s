@@ -5,8 +5,8 @@ LABEL maintainer="Docker Maintainers <chaiyd.cn@gmail.com>"
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories \
     && apk update
 
-ARG KAFKA_VER=2.6.0
-ARG KAFKA_NAME=kafka_2.12-$KAFKA_VER
+ARG KAFKA_VER=2.13-2.6.0
+ARG KAFKA_NAME=kafka_$KAFKA_VER
 ARG KAFKA_URL=https://downloads.apache.org/kafka/$KAFKA_VER/$KAFKA_NAME.tgz
 
 RUN wget -c $KAFKA_URL && \
