@@ -29,10 +29,7 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 ENV BROKER_ID=0 \
     ZOOKEEPER_CONNECT=localhost:2181 \
     ZOOKEEPER_SYNC_TIME=18000 \
-    NUM_PARTITIONS=1 \
-    HOSTNAME=$hostname \
-    LISTENERS="listeners=PLAINTEXT://:9092" \
-    ADVERTISED_LISTENERS="advertised.listeners=PLAINTEXT://$HOSTNAME:9092"
+    NUM_PARTITIONS=1
 
 COPY --from=builder /opt/ /opt/kafka
 ADD start.sh /opt/kafka

@@ -12,9 +12,9 @@ Apache Kafka is an open-source distributed event streaming platform used by thou
     ZOOKEEPER_CONNECT=localhost:2181
     ZOOKEEPER_SYNC_TIME=2000
     NUM_PARTITIONS=1
-    # 默认启动使用hostname，如想外部可自行更改，更改HOSTNAME的值为公网ip即可
-    HOSTNAME=$hostname \
-    LISTENERS="listeners=PLAINTEXT://:9092" \
+  ---
+    # 默认启动使用HOSTNAME为空值，如想外部访问，可增加环境变量HOSTNAME的值为公网ip即可
+    LISTENERS="listeners=PLAINTEXT://:9092"
     ADVERTISED_LISTENERS="advertised.listeners=PLAINTEXT://$HOSTNAME:9092"
     ``` 
 
