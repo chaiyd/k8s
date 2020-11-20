@@ -1,7 +1,7 @@
 #!/bin/sh
 
 LISTENERS="listeners=PLAINTEXT://:9092"
-ADVERTISED_LISTENERS="advertised.listeners=PLAINTEXT://$HOSTNAME:9092"
+ADVERTISED_LISTENERS="advertised.listeners=PLAINTEXT://$HOSTNAME"
 
 set -eux
 

@@ -15,7 +15,7 @@ Apache Kafka is an open-source distributed event streaming platform used by thou
   ---
     # 默认启动使用HOSTNAME为空值，如想外部访问，可增加环境变量HOSTNAME的值为公网ip即可
     LISTENERS="listeners=PLAINTEXT://:9092"
-    ADVERTISED_LISTENERS="advertised.listeners=PLAINTEXT://$HOSTNAME:9092"
+    ADVERTISED_LISTENERS="advertised.listeners=PLAINTEXT://$HOSTNAME"
     ``` 
 
 ## kafka官方文档
