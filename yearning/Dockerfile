@@ -32,7 +32,7 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 #ENV SecretKey=dbcjqheupqjsyear
 
 COPY --from=builder /opt/Yearning-go/Yearning /opt/Yearning-go/Yearning
-COPY --from=builder /opt/Yearning-go/dist /opt/Yearning-go/dist
+#COPY --from=builder /opt/Yearning-go/dist /opt/Yearning-go/dist
 COPY --from=builder /opt/Yearning-go/conf.toml /opt/Yearning-go/conf.toml
 
 WORKDIR /opt/Yearning-go
