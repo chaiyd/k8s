@@ -6,7 +6,7 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     && apk update  \
     && echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf
 
-ARG YEARNING_VER=2.3.0
+ARG YEARNING_VER=2.3.1
 ARG MYSQL_ADDR=127.0.0.1:3306
 ARG MYSQL_DB=yearning
 ARG MYSQL_USER=root
