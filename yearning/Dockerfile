@@ -12,7 +12,7 @@ ARG MYSQL_DB=yearning
 ARG MYSQL_USER=root
 ARG MYSQL_PASSWORD=passwd
 
-ARG YEARNING_URL=https://github.com/cookieY/Yearning/releases/download/v$YEARNING_VER/Yearning-2.3.0-GA-linux-amd64.zip
+ARG YEARNING_URL=https://github.com/cookieY/Yearning/releases/download/v$YEARNING_VER/Yearning-$YEARNING_VER-GA-linux-amd64.zip
 
 RUN wget -cqO yearning.zip $YEARNING_URL && \
     unzip yearning.zip -d /opt
