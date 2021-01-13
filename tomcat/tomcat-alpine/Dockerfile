@@ -1,5 +1,5 @@
 # use microsoft jdk
-FROM mcr.microsoft.com/java/jdk:8u252-zulu-alpine
+FROM mcr.microsoft.com/java/jdk:8-zulu-alpine
 
 LABEL maintainer="Docker Maintainers <chaiyd.cn@gmail.com>"
 #setting time zone
