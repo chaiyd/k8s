@@ -5,7 +5,7 @@ LABEL maintainer="Docker Maintainers <chaiyd.cn@gmail.com>"
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories \
     && apk update
 
-ARG ROCKETMQ_VER=4.7.1
+ARG ROCKETMQ_VER=4.8.0
 ARG ROCKETMQ_NAME=rocketmq-all-$ROCKETMQ_VER-bin-release
 ARG ROCKETMQ_URL=https://downloads.apache.org/rocketmq/$ROCKETMQ_VER/$ROCKETMQ_NAME.zip
 
@@ -17,7 +17,7 @@ FROM mcr.microsoft.com/java/jdk:8-zulu-alpine
 
 LABEL maintainer="Docker Maintainers <chaiyd.cn@gmail.com>"
 
-ARG ROCKETMQ_VER=4.7.1
+ARG ROCKETMQ_VER=4.8.0
 ARG ROCKETMQ_NAME=rocketmq-all-$ROCKETMQ_VER-bin-release
 ENV ROCKETMQ_ADDR=localhost:9876
 
