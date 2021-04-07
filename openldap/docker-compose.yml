@@ -16,6 +16,7 @@ services:
       - LDAP_DOMAIN=baidu.com
       - LDAP_ADMIN_PASSWORD=asdasdasd
 
+  # ldap 管理页面
   phpldapadmin :
     container_name: phpldapadmin
     image: osixia/phpldapadmin:0.9.0

@@ -18,6 +18,13 @@
 ## [rocketmq](https://github.com/chaiyd/docker/tree/master/rocketmq)
 - Apache RocketMQ™ is a unified messaging engine, lightweight data processing platform.
 
+## [gitlab](https://github.com/chaiyd/docker/tree/master/gitlab)
+- docker-compose 配置ldap，邮箱等
+
+## [openldap](https://github.com/chaiyd/docker/tree/master/openldap)
+- docker-compose 编排ldap相关服务
+- openldap、phpldapadmin、self-service-password
+
 
 ---
 ## 旧工程
