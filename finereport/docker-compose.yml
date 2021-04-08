@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  finereport:
+    image: chaiyd/finereport:10.01.15
+    ports:
+      - 9012:8080
+    volumes:
+      - reportlets:/usr/local/finereport/webapps/webroot/WEB-INF/reportlets
+      - embed:/usr/local/finereport/webapps/webroot/WEB-INF/embed
+      - plugins:/usr/local/finereport/webapps/webroot/WEB-INF/plugins
+      - config:/usr/local/finereport/webapps/webroot/WEB-INF/config
+    restart: always
+volumes:
+  reportlets:
+  embed:
+  plugins:
+  config:
