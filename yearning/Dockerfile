@@ -6,14 +6,14 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     && apk update  \
     && echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf
 
-ARG YEARNING_VER=2.3.1
+ARG YEARNING_VER=2.3.2.2
 ARG MYSQL_ADDR=127.0.0.1:3306
 ARG MYSQL_DB=yearning
 ARG MYSQL_USER=root
 ARG MYSQL_PASSWORD=passwd
 
-ARG YEARNING_URL=https://github.com/cookieY/Yearning/releases/download/v$YEARNING_VER/Yearning-$YEARNING_VER-GA-linux-amd64.zip
-
+#ARG YEARNING_URL=https://github.com/cookieY/Yearning/releases/download/v$YEARNING_VER/Yearning-$YEARNING_VER-linux-amd64.zip
+ARG YEARNING_URL=https://github.com/cookieY/Yearning/releases/download/2.3.2.1/Yearning-2.3.2.2-linux-amd64.zip
 RUN wget -cqO yearning.zip $YEARNING_URL && \
     unzip yearning.zip -d /opt
 
