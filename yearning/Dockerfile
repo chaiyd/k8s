@@ -37,4 +37,4 @@ EXPOSE 8000
 
 ENTRYPOINT  ["/opt/Yearning"]
 
-CMD ["-m", "-s"]
+CMD ["install", "run"]
