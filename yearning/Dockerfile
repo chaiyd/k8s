@@ -7,10 +7,6 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     && echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf
 
 ARG YEARNING_VER=2.3.2.2
-ARG MYSQL_ADDR=127.0.0.1:3306
-ARG MYSQL_DB=yearning
-ARG MYSQL_USER=root
-ARG MYSQL_PASSWORD=passwd
 
 #ARG YEARNING_URL=https://github.com/cookieY/Yearning/releases/download/v$YEARNING_VER/Yearning-$YEARNING_VER-linux-amd64.zip
 ARG YEARNING_URL=https://github.com/cookieY/Yearning/releases/download/2.3.2.1/Yearning-2.3.2.2-linux-amd64.zip
@@ -31,14 +27,14 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 
 #ENV SecretKey=dbcjqheupqjsyear
 
-COPY --from=builder /opt/Yearning-go/Yearning /opt/Yearning-go/Yearning
+COPY --from=builder /opt/Yearning /opt/Yearning
 #COPY --from=builder /opt/Yearning-go/dist /opt/Yearning-go/dist
-COPY --from=builder /opt/Yearning-go/conf.toml /opt/Yearning-go/conf.toml
+COPY --from=builder /opt/conf.toml /opt/conf.toml
 
-WORKDIR /opt/Yearning-go
+WORKDIR /opt/
 
 EXPOSE 8000
 
-ENTRYPOINT  ["/opt/Yearning-go/Yearning"]
+ENTRYPOINT  ["/opt/Yearning"]
 
 CMD ["-m", "-s"]
