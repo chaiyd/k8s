@@ -10,6 +10,12 @@
 - 此仓库与[docker hub](https://hub.docker.com/u/chaiyd)关联，进行自动构建
 - 仓库中会存在一些早期dockerfile，在慢慢的更新维护中。
 
+## [mysql](https://github.com/chaiyd/docker/tree/master/mysql)
+- mysql 8.0
+- 根据官方MySQL二次打包
+  - update mysql_native_password
+  - Time Zone Asia/Shanghai
+
 ## [kafka](https://github.com/chaiyd/docker/tree/master/kafka)
 - Apache Kafka is an open-source distributed event streaming platform used by thousands of companies for high-performance data pipelines, streaming analytics, data integration, and mission-critical applications.
 
@@ -32,15 +38,20 @@
 ## [mm-wiki](https://github.com/chaiyd/docker/tree/master/mm-wiki)
 - MM-Wiki 是一个轻量级的企业知识分享与团队协同软件，可用于快速构建企业 Wiki 和团队知识分享平台。部署方便，使用简单，帮助团队构建一个信息共享、文档管理的协作环境。
 
+## [wkcrm](https://github.com/chaiyd/docker/tree/master/wkcrm)
+- 悟空CRM
+- spring-java
+
 ---
 ## 旧工程
 - 很长时间未更新，后续有时间后，会逐渐更新
+- 不再维护，将于近期删除
 ## [tomcat](https://github.com/chaiyd/docker/tree/master/tomcat)
 - tomcat-centos
     - centos
 - tomcat-alpine
     - alpine
-
+  
 ## [5kcrm](https://github.com/chaiyd/docker/tree/master/5kcrm)
 - 悟空CRM
 
