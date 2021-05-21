@@ -47,13 +47,12 @@ services:
     container_name: wkcrm_nacos
     environment:
       - MODE=standalone
-      - SPRING_DATASOURCE_PLATFORM=mysql
+      - SPRING_DATASOURCE_PLATFORM=mysql # nacos 不支持utf8mb4
       - MYSQL_SERVICE_HOST=mysql
       - MYSQL_SERVICE_PORT=3306
       - MYSQL_SERVICE_DB_NAME=nacos
       - MYSQL_SERVICE_USER=root
       - MYSQL_SERVICE_PASSWORD=password
-      - MYSQL_SERVICE_DB_PARAM=characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useSSL=false
     depends_on:
       - mysql
     volumes:
