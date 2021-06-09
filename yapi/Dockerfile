@@ -12,4 +12,4 @@ RUN npm install -g yapi-cli --registry https://registry.npm.taobao.org
 EXPOSE 3000 9090
 VOLUME /my-yapi
 
-CMD ["yapi","server"]
+#CMD ["yapi","server"]
