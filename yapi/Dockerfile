@@ -1,4 +1,4 @@
-FROM node:lts-alpine
+FROM node:12-alpine
 MAINTAINER chaiyd.cn@gmail.com
 
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories \
