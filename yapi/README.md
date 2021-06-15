@@ -39,7 +39,7 @@ services:
         #ports:
         #    - 27017:27017
         environment:
-          MONGO_INITDB_ROOT_USERNAME: root
+          MONGO_INITDB_ROOT_USERNAME: mongo
           MONGO_INITDB_ROOT_PASSWORD: example
           MONGO_INITDB_DATABASE: yapi
 ```
