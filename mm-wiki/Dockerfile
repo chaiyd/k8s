@@ -8,7 +8,7 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 
 WORKDIR /app
 
-ENV VERSION=0.2.0
+ARG VERSION=0.2.0
 
 RUN wget -c https://github.com/phachon/mm-wiki/archive/refs/tags/v$VERSION.tar.gz \
     && tar -zxvf *.tar.gz \
@@ -31,8 +31,9 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     && echo "Asia/Shanghai" > /etc/timezone \
     && apk del tzdata
 
-ENV VERSION=0.2.0\
-    HTTP_PORT=8081 \
+ARG VERSION=0.2.0
+
+ENV HTTP_PORT=8081 \
     DB_HOST=127.0.0.1 \
     DB_PORT=3306 \
     DB_NAME=mm_wiki \
