@@ -31,6 +31,9 @@
 ## mm-wiki官方文档
 - https://github.com/phachon/mm-wiki.git
 
+## frok
+- https://github.com/chaiyd/mm-wiki.git
+
 
 ## openldap
 ```
