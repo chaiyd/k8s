@@ -42,6 +42,10 @@
 - 悟空CRM
 - spring-java
 
+## [openjdk](https://github.com/chaiyd/docker/tree/master/openjdk)
+- mcr.microsoft.com/java/jdk:8-zulu-alpine
+- skywalking-agent-8.5
+
 ---
 ## 旧工程
 - 很长时间未更新，后续有时间后，会逐渐更新
