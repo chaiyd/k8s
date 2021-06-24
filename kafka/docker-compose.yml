@@ -2,7 +2,7 @@ version: '3'
 
 services:
     kafka:
-        image: chaiyd/kafka:2.13-2.6.0
+        image: chaiyd/kafka:2.13-2.8.0
         environment:
             ZOOKEEPER_CONNECT: zookeeper:2181
             HOSTNAME: 192.168.0.1
