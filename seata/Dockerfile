@@ -9,7 +9,7 @@ ARG APP_NAME=seata-server-$VERSION
 RUN wget -c https://github.com/seata/seata/releases/download/v$VERSION/$APP_NAME.tar.gz && \
     tar -zxvf $APP_NAME.tar.gz
 
-FROM mcr.microsoft.com/java/jdk:8u252-zulu-alpine
+FROM mcr.microsoft.com/java/jre:8u252-zulu-alpine
 
 LABEL maintainer="<chaiyd.cn@gmail.com>"
 
