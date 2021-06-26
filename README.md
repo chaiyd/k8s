@@ -46,6 +46,10 @@
 - https://github.com/seata/seata.git
 - Seata 是一款开源的分布式事务解决方案，致力于在微服务架构下提供高性能和简单易用的分布式事务服务。
 
+## [sentinel](https://github.com/chaiyd/docker/tree/master/sentinel)
+- https://github.com/seata/seata.git
+- sentinel 是一款开源的分布式事务解决方案，致力于在微服务架构下提供高性能和简单易用的分布式事务服务。
+
 ## [openjdk](https://github.com/chaiyd/docker/tree/master/openjdk)
 - mcr.microsoft.com/java/jdk:8-zulu-alpine
 - skywalking-agent-8.5
