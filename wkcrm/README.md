@@ -6,3 +6,10 @@
 # clone wkcrm
 sh start.sh
 ```
+
+## docker
+```shell
+docker build -t wkcrm:11.3.2 .
+```
+
+

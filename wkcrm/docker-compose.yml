@@ -136,7 +136,7 @@ services:
       - "8443:8443"
     networks:
       - wkcrm_network
-    entrypoint: /wkcrm.sh restart
+    #entrypoint: /wkcrm.sh restart
     depends_on:
       - mysql
       - nacos
